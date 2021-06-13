@@ -1,0 +1,328 @@
+$primary: #dddddd;
+$secondary: #6d6b6b;
+$tercialy: #f7f7f7;
+$small-margin: 1.5rem;
+$medium-margin: 2rem;
+$big-margin: 2.5rem;
+$medium-font-size: 2rem;
+$small-font-size: 1.5rem;
+$border-style: solid;
+$border-style-button: solid;
+
+@mixin grid() {
+    display: grid;
+    grid-template-rows: auto;
+    grid-auto-rows: minmax(20px, auto);
+}
+
+@mixin center-align() {
+    text-align: center;
+}
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    @include grid();
+    font-size: $medium-font-size;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+
+}
+
+.first-block {
+    @include grid();
+    font-size: $medium-font-size;
+    align-content: center;
+    justify-content: center;
+    margin: $big-margin;
+    border-bottom: $border-style 2px $primary;
+    border-top: $border-style 2px $primary;
+}
+
+.first-block__first-element {
+    display: flex;
+    justify-content: center;
+    margin: $small-margin;
+    font-size: $medium-font-size;
+}
+
+
+.first-block__second-element {
+    justify-content: center;
+    margin: $small-margin;
+    font-size: $small-font-size;
+
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        }
+
+    li {
+        float: left;
+        padding: 0.5rem;
+        }
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: #1984ea;
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: #1984ea;
+            }
+        }
+} 
+
+
+.second-block {
+    font-size: $medium-font-size;
+    margin: $big-margin;
+    text-align: center;
+}
+
+.second-block {
+    a {
+        color: #1984ea;
+        font-size: $small-font-size;
+        text-decoration: none;
+        color: #1984ea;
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: #1984ea;
+            }
+    }
+}
+
+.second-block__first-element {
+    margin: $small-margin;
+    border-radius: 12px;
+    height: 350px;
+}
+
+.second-block__second-element{
+    @include center-align();
+    margin: $small-margin;
+}
+
+.third-block {
+    @include grid();
+    @include center-align();
+    font-size: $medium-font-size;
+    width: 100%;
+}
+
+.third-block--color {
+    color: $secondary;
+    font-size: $medium-font-size;
+    background-color: $tercialy;
+}
+
+h2 {
+    color: black;
+}
+
+.third-block__first-element {
+    place-self: center stretch;
+    margin: $small-margin;
+}
+
+.third-block__first-element:hover {
+    text-decoration: underline;
+    text-decoration-color: $secondary;
+}
+
+
+.third-block__second-element {
+    place-self: center stretch;
+    margin: $small-margin;
+}
+
+.third-block__second-element:hover {
+    text-decoration: underline;
+    text-decoration-color: $secondary;
+}
+
+.third-block__third-element {
+    place-self: center stretch;
+    margin: $small-margin;
+}
+
+.third-block__third-element:hover {
+    text-decoration: underline;
+    text-decoration-color: $secondary;
+}
+
+.third-block__fourth-element {
+    place-self: center stretch;
+    margin: $small-margin;
+}
+
+.third-block__fourth-element:hover {
+    text-decoration: underline;
+    text-decoration-color: $secondary;
+}
+
+.fourth-block {
+    @include grid();
+    font-size: $medium-font-size;
+    margin: $big-margin;
+}
+
+.fourth-block__first-element {
+    @include center-align();
+    margin: $small-margin;
+}
+
+.fourth-block__second-element {
+    margin: $medium-margin;
+    justify-self: center;
+    padding: 1rem 2rem;
+    font-size: $small-font-size;
+    background-color: $tercialy;
+    border-radius: 5px;
+    border: 1px $border-style-button $primary;
+    color: black;
+    text-decoration: none;
+}
+
+.fourth-block__second-element:hover {
+    margin: $medium-margin;
+    justify-self: center;
+    padding: 20px 40px;
+    font-size: $small-font-size;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px $border-style-button $primary;
+    text-decoration: none;
+
+}
+
+.fifth-block {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.fifth-block--color {
+    background-color: $tercialy;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .first-block {
+        @include grid();
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .first-block__first-element {
+        justify-content: start;
+        font-size: $medium-font-size;
+    }
+
+    .first-block__second-element {
+        justify-content: end;
+        font-size: $small-font-size;
+    }
+
+
+    .first-block__second-element {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+
+        li {
+            padding: 0.5rem;
+            float: left;
+            &:hover {
+                border: $border-style-button 1px #cfcfcf;;
+                background-color: $tercialy;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: #1984ea;
+            &:hover {
+                text-decoration: none;}
+        }
+
+    }
+
+    .second-block {
+        a {
+            text-decoration: none;
+            color: #1984ea;
+            &:hover {
+                border: $border-style-button 1px #cfcfcf;;
+                background-color: $tercialy;
+                border-radius: 5px;
+                text-decoration: none;}
+                padding: 0.5rem;
+        }
+    }
+
+    .second-block--size {
+       max-width: 50rem;
+       margin: auto;
+       padding: 3rem;
+    }
+    
+
+    .third-block {
+        @include grid();
+        font-size: $medium-font-size;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "header header"
+        "first-element second-element"
+        "third-element fourth-element";
+    }
+
+    h2 {
+        grid-area: header;
+    }
+
+    .third-block__first-element {
+        justify-self: center;
+        grid-area: first-element;
+
+    }
+
+    .third-block__second-element {
+        justify-self: center;
+        grid-area: second-element;
+    }
+
+    .third-block__third-element {
+        justify-self: center;
+        grid-area: third-element;
+    }
+
+    .third-block__fourth-element {
+        justify-self: center;
+        grid-area: fourth-element;
+    }
+
+    .fourth-block--size {
+        max-width: 50rem;
+        margin: auto;
+    }
+
+
+}
