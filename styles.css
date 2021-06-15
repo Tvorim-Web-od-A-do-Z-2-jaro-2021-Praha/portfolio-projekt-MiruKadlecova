@@ -124,6 +124,20 @@ body {
   background-color: #f7f7f7;
 }
 
+.third-block svg {
+  fill: #1984ea;
+  background: white;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 30%;
+  -webkit-box-shadow: 0 5px 15px -5px #dddddd;
+          box-shadow: 0 5px 15px -5px #dddddd;
+}
+
+.third-block img {
+  place-self: center;
+}
+
 h2 {
   color: black;
 }
@@ -173,11 +187,19 @@ h2 {
 }
 
 .fourth-block {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  grid-auto-rows: minmax(20px, auto);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 2rem;
   margin: 2.5rem;
 }
@@ -189,8 +211,6 @@ h2 {
 
 .fourth-block__second-element {
   margin: 2rem;
-  -ms-grid-column-align: center;
-      justify-self: center;
   padding: 1rem 2rem;
   font-size: 1.5rem;
   background-color: #f7f7f7;
@@ -226,6 +246,51 @@ h2 {
 
 .fifth-block--color {
   background-color: #f7f7f7;
+}
+
+.fourth-block__svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fourth-block__svg a {
+  width: 40px;
+  height: 40px;
+  background: #f7f7f7;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 30%;
+  -webkit-box-shadow: 0 5px 15px -5px #dddddd;
+          box-shadow: 0 5px 15px -5px #dddddd;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.fourth-block__svg svg {
+  text-align: center;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.fourth-block__svg svg:hover {
+  -webkit-transform: rotate(10deg) scale(1.1);
+          transform: rotate(10deg) scale(1.1);
+}
+
+.svg__facebook:hover {
+  fill: #4267B2;
+}
+
+.svg__linkedin:hover {
+  fill: #0077B5;
+}
+
+.svg__gmail:hover {
+  fill: #EA4335;
 }
 
 @media screen and (min-width: 1200px) {

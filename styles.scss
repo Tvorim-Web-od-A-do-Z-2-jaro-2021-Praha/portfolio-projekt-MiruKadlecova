@@ -124,6 +124,23 @@ body {
     background-color: $tercialy;
 }
 
+.third-block {
+    svg {
+        fill: #1984ea;
+        background: white;
+        margin: 0.5rem;
+        padding: 1rem;
+        border-radius: 30%;
+        box-shadow: 0 5px 15px -5px $primary;
+    }
+}
+
+.third-block {
+    img {
+        place-self: center;
+    }
+}
+
 h2 {
     color: black;
 }
@@ -170,7 +187,10 @@ h2 {
 }
 
 .fourth-block {
-    @include grid();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: $medium-font-size;
     margin: $big-margin;
 }
@@ -182,7 +202,6 @@ h2 {
 
 .fourth-block__second-element {
     margin: $medium-margin;
-    justify-self: center;
     padding: 1rem 2rem;
     font-size: $small-font-size;
     background-color: $tercialy;
@@ -215,6 +234,55 @@ h2 {
 .fifth-block--color {
     background-color: $tercialy;
 }
+
+.fourth-block__svg {
+    display: flex;
+    justify-content: center;
+    a { 
+        width: 40px;
+        height: 40px;
+        background: $tercialy;
+        margin: 0.5rem;
+        padding: 1rem;
+        border-radius: 30%;
+        box-shadow: 0 5px 15px -5px $primary;
+        overflow: hidden;
+        text-decoration: none;
+    }
+    
+}
+
+.fourth-block__svg {
+    svg {
+        text-align: center;
+        transition: 0.2s linear;    
+        &:hover {
+        transform: rotate(10deg) scale(1.1);
+        }
+    }
+}
+
+
+
+.svg__facebook {
+    &:hover {
+    fill: #4267B2;
+    }
+}
+
+.svg__linkedin {
+    &:hover {
+    fill: #0077B5;
+    }
+}
+
+.svg__gmail {
+    &:hover{
+    fill: #EA4335;
+    }
+}
+
+
 
 @media screen and (min-width: 1200px) {
 
