@@ -24,6 +24,8 @@ body {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-auto-rows: minmax(20px, auto);
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
   font-size: 2rem;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -105,6 +107,7 @@ body {
 .second-block__second-element {
   text-align: center;
   margin: 1.5rem;
+  width: 100%;
 }
 
 .third-block {
@@ -115,7 +118,6 @@ body {
   grid-auto-rows: minmax(20px, auto);
   text-align: center;
   font-size: 2rem;
-  width: 100%;
 }
 
 .third-block--color {
@@ -132,10 +134,6 @@ body {
   border-radius: 30%;
   -webkit-box-shadow: 0 5px 15px -5px #dddddd;
           box-shadow: 0 5px 15px -5px #dddddd;
-}
-
-.third-block img {
-  place-self: center;
 }
 
 h2 {
@@ -241,7 +239,7 @@ h2 {
           justify-content: center;
   font-size: 1rem;
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
 }
 
 .fifth-block--color {
